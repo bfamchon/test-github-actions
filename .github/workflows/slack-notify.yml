@@ -9,7 +9,7 @@ jobs:
     - name: Notify
       uses: rtCamp/action-slack-notify@v2
       env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_TRIBE }}
         SLACK_USERNAME: PR_BOT
         SLACK_ICON_EMOJI: ":building_construction:"
         SLACK_MESSAGE: A pull-request named `${{ github.event.pull_request.title }}` (${{ github.event.pull_request.html_url }}) has been opened and waiting your review
