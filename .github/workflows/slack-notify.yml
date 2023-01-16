@@ -11,6 +11,8 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: PR_BOT
-        SLACK_ICON_EMOJI: ":robot:"
+        SLACK_ICON_EMOJI: ":building_construction:"
+        SLACK_MESSAGE: CI build for `${{ env.PR_TITLE }}` (${{ env.PR_URL }}) has started
         SLACK_COLOR: ${{ job.status }}
         SLACK_FOOTER: "Good job ! :rocket:"
+        MSG_MINIMAL: true
