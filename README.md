@@ -27,9 +27,12 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: PR_BOT
-        SLACK_ICON_EMOJI: ":robot:"
+        SLACK_ICON_EMOJI: ":building_construction:"
+        SLACK_MESSAGE: A new PR `${{ github.event.pull_request.title }}` (${{ github.event.pull_request.url }}) has been opened
         SLACK_COLOR: ${{ job.status }}
         SLACK_FOOTER: "Good job ! :rocket:"
+        MSG_MINIMAL: true
+
 ```
 
 ## Profit
