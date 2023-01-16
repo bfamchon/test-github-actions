@@ -1,0 +1,12 @@
+on: pull_request
+name: Slack Notification Demo
+jobs:
+  notify-slack:
+    name: Send a notification to Slack channel
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Notify
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
